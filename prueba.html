@@ -5,43 +5,111 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+
     <title>Administrador de Torneo</title>
 </head>
 <body class="bg-[#14161A] text-lg text-white">
     
-    <header class="flex justify-between items-center h-10 bg-[#282C34]">
-        <h2 class="ml-[6.1rem]"> Menú </h2>
-        <h2 class="ml-52"> Lista de torneos </h2>
-        <button class="bg-cyan-500 rounded hover:bg-cyan-600 mr-20 w-32 h-6 text-base"> Crear Torneo</button>
-    </header>
+  <div class="h-screen lw-16 lg:w-64 fixed text-center bg-[#282C34]">
+        <h1>Torneo</h1>
+        <nav class="mt-3">
+            <ul class="border rounded">Fase de Grupos</ul>
+            <ul class="border rounded mt-2">Cuartos de Final</ul>
+            <ul class="border rounded mt-2">Semi Final</ul>
+            <ul class="border rounded mt-2">Final</ul>
+        </nav>
+  </div>
 
-    <div class="flex h-full bg-[#282C34]">
-        <div class="flex flex-col h-[43rem] w-72 text-center mt-3">
-            <a href="administrar_torneo.html">
-                <button">
-                <h2 class="border border-cyan-300 hover:bg-cyan-500 rounded mb-1">Torneos</h2>
-            </button>
-            </a>
+  <div class="flex flex-col h-screen w-full pl-16 lg:pl-64">
+      <header class="flex justify-around bg-[#282C34]">
+          <h1 class="ml-[25.7rem]">Lista de Grupos</h1>
+          <h1 class="">Subir archivo</h1>
+      </header>
 
-            <button>
-                <h2 class="border border-cyan-300 hover:bg-cyan-500 rounded">Atletas</h2>
-            </button>
-            
-            <button>
-                <h2 class="border border-cyan-300 hover:bg-cyan-500 rounded mt-1">Equipos</h2>
-            </button>
-            
-        </div>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item mt-3 ml-6 mr-6">
+                <h2 class="accordion-header mb-0" id="headingOne"> 
+                  <button class="inline-block px-6 py-2.5 bg-[#282C34]  leading-tight rounded ease-in-out w-full" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Grupo A
+                  </button>
+                </h2>
 
-        <main class="flex w-full bg-[#14161A]">
-            <div class="flex justify-between ml-6 mr-6 mt-3 h-8 bg-[#282C34]">
-                <h1 class="">Nombre</h1>
-                <h1 class="">Alias</h1>
+                <div class="collapse" id="collapseExample">
+                  <div class="block p-6 rounded-lg shadow-lg bg-[#282C34]">
+                    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                  </div>
+                </div>
             </div>
-        </main>
+        </div>    
 
 
-    </div>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item mt-3 ml-6 mr-6">
+              <h2 class="accordion-header mb-0" id="headingTwo"> 
+                <button class="inline-block px-6 py-2.5 bg-[#282C34]  leading-tight rounded ease-in-out w-full" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+                  Grupo B
+                </button>
+              </h2>
+
+              <div class="collapse" id="collapseExample1">
+                <div class="block p-6 rounded-lg shadow-lg bg-[#282C34]">
+                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+              </div>
+          </div>
+        </div>    
+
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item mt-3 ml-6 mr-6">
+              <h2 class="accordion-header mb-0" id="headingTwo"> 
+                <button class="inline-block px-6 py-2.5 bg-[#282C34]  leading-tight rounded ease-in-out w-full" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                  Grupo C
+                </button>
+              </h2>
+
+              <div class="collapse" id="collapseExample2">
+                <div class="block p-6 rounded-lg shadow-lg bg-[#282C34]">
+                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+              </div>
+          </div>
+        </div>    
+
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item mt-3 ml-6 mr-6">
+              <h2 class="accordion-header mb-0" id="headingTwo"> 
+                <button class="inline-block px-6 py-2.5 bg-[#282C34]  leading-tight rounded ease-in-out w-full" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+                  Grupo D
+                </button>
+              </h2>
+
+              <div class="collapse" id="collapseExample3">
+                <div class="block p-6 rounded-lg shadow-lg bg-[#282C34]">
+                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+              </div>
+          </div>
+        </div>    
+
+  </div>
+
 
 
 </body>
