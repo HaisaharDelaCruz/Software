@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="style/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: { 
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+
+    <title>Administrador de Torneo</title>
+</head>
+<body class="bg-[#14161A] text-lg text-white">
+    
+
+    <div class="flex flex-col h-screen w-full ">
+        <header class="flex justify-around bg-[#282C34]">
+        <h1 class="ml-[35rem]">Lista de Grupos</h1>
+        <input type="file" id="upload" hidden/>
+        <label for="upload">Subir Archivo</label>
+        </header>
+
+
+        <main class="flex flex-col w-full bg-[#14161A]">
+            <div class="flex flex-col mt-3 ml-6 mr-6">
+                <a href="prueba.html">
+                    <button class="bg-[#282C34] rounded h-9 mb-3 text-justify w-full ">
+                        <p class="ml-20 text-center ">Torneo 1</p>
+                    </button>
+                </a>
+
+                <a href="prueba.html">
+                <button class="bg-[#282C34] rounded h-9 mb-3 text-justify w-full">
+                    <p class="ml-20 text-center">Torneo 2</p>
+                </button>
+                </a>
+
+                <a href="prueba.html">
+                <button class="bg-[#282C34] rounded h-9 mb-3 text-justify w-full">
+                    <p class="ml-20 text-center">Torneo 3</p>
+                </button>
+                </a>
+            </div>
+        </main>
+
+    </div>
+
+
+
+</body>
+</html>
